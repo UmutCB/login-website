@@ -1,0 +1,8 @@
+<div *ngIf="isLoggedIn()">
+  <h1>{{ welcomeMessage }}</h1>
+  <button (click)="logout()">Logout</button>
+</div>
+<div *ngIf="!isLoggedIn()">
+  <login (onLogin)="login($event)"></login>
+</div>
+<logout></logout>
