@@ -6,10 +6,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { LogoutComponent } from './logout/logout.component';
 import { MainComponent } from './main/main.component';
-import { WebsocketService } from './Services/websocket.service';
-import { LoginService } from './login.service';
-import { LogoutService } from './logout.service';
-import { MessageService } from './Services/message.service';
+import { WebSocketService } from './websocket.service';
+import {AuthService} from './authentication-service.service';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { WelcomeComponent } from './welcome/welcome.component';
@@ -21,6 +19,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     LogoutComponent,
     MainComponent,
     WelcomeComponent,
+    AuthService
     
   ],
   imports: [
@@ -29,7 +28,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [LoginService,LogoutService, MessageService, WebsocketService],
+  providers: [LoginComponent,LoginComponent, AuthService, WebSocketService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
